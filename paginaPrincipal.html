@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>ABOUT ME!</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.1.45/css/materialdesignicons.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Enriqueta&display=swap" rel="stylesheet">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/93b9f45dc1.js" crossorigin="anonymous"></script>
+		<style>
+			body{
+				background-color: #000000;color: #ffffff;
+			}
+			.card{background-color: #000000;border-style: none;}
+			.bg-light{background-color: #000000 !important;}
+		
+			.navbar-light .navbar-nav .nav-link{
+				color: #c7cbd1;
+			}
+			.navbar-light .navbar-nav .nav-link:hover {color: #ffffff;border-bottom: 1px solid #ffa500;}
+			.intro {
+				margin-top: 150px;
+			}
+			p{
+				color: #c7cbd1;
+			}
+			b{
+				style="color:#ffffff;"
+			}
+			
+			.btn-outline-warning:hover{
+				background-color: #ffa500;
+    			border-color: #ffa500;
+			}
+			.card-body {padding-top: 0; padding-bottom: 0;}
+			h2{text-align: center;}
+			.pad{padding-left: 20px;}
+			.espacio {
+				margin-top: 40px;
+			}
+			.navbar-light .navbar-toggler{
+				color: #ffffff; border-color: #ffffff;
+			}
+			.barras {
+				
+				text-align: center;
+			}
+			.barras .round{
+				min-height: 100px;
+				margin-top: 5px;
+				position: relative;
+				margin-bottom: 5px;
+			}
+			.barras  .round strong{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top:-50px;
+				transform: translate(-50%);
+				font-size: 20px;
+				color: #ffffff;
+				font-weight: 100;
+			}
+			.barras  span {
+				display: block;
+				color: #ffe518;
+				font-size: 17px;
+				margin-top: 10px;
+			}
+			.barras  span i{
+				color: #ffe518;
+				font-size: 22px;
+				margin-right: 7px;
+			}
+			canvas {
+			    height: 100px;
+			    width: 100px;
+
+			}
+			
+			a:link {color:#ffffff;}
+			a:visited {color:#ffffff;}
+			a:active {color:#ffffff;}
+			a:hover {color:#ffffff;text-decoration: none;}
+			.containerImg {
+			  position: relative;
+			  width: 100%;
+			}
+			.image {
+			  opacity: 1;
+			  display: block;
+			  width: 100%;
+			  height: auto;
+			  transition: .5s ease;
+			  backface-visibility: hidden;
+			}
+			.middle {
+			  transition: .5s ease;
+			  opacity: 0;
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  transform: translate(-50%, -50%);
+			  -ms-transform: translate(-50%, -50%);
+			  text-align: center;
+			}
+			.containerImg:hover .image {
+			  opacity: 0.1;
+			}
+			.containerImg:hover .middle {
+			  opacity: 1;
+			}
+
+			.text {
+			  background-color: #ffa500;
+			  color: white;
+			  font-size: 16px;
+			  padding: 8px 16px;
+			  border: 3px solid #ffa500;
+			  margin-bottom: 15px;
+			}
+			#botonArriba {
+				position: fixed;
+				bottom: 20px;
+				right: -100px;
+				width: 40px;
+				font-size: 40px;
+			}
+			.modal-content {
+				background-color: #000000;
+			}
+			.close {
+				color: #ffffff;
+			}
+			.close:hover{
+				color: #ffffff;
+			}
+			.modal-footer .btn-secondary {
+				background-color: transparent;
+			}
+			.btn-primary{
+				background-color: transparent;
+				border-color: #ffa500;
+			}
+			.btn-primary:hover{
+				background-color: #ffa500;
+				border-color: #ffa500;
+			}			
+			.btn-primary:focus{
+				background-color: #ffa500;
+				border-color: #ffa500;	
+				box-shadow: none;
+			}
+			.btn-primary:not(:disabled):not(.disabled):active{
+				background-color: #ffa500;
+				border-color: #ffa500;
+			}
+			.padCel{
+				padding-bottom: 20px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu" >
+  				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    				<span><i class="fas fa-bars"></i></span>
+  				</button>
+  				<div class="collapse navbar-collapse" id="navbarNav">
+    				<ul class="navbar-nav" style="margin: auto;margin-right: 0;">
+      					<li class="nav-item">
+        					<a class="nav-link" href="#sobreMi">Sobre mí</a>
+      					</li>
+      					<li class="nav-item">
+        					<a class="nav-link" href="#formacion">Formacion</a>
+      					</li>
+      					<li class="nav-item">
+        					<a class="nav-link" href="#certificados">Certificaciones</a>
+      					</li>
+       					<li class="nav-item">
+        					<a class="nav-link" href="#barras">Tecnologias</a>
+      					</li>
+     	 				<li class="nav-item">
+        					<a class="nav-link" href="#proyecto">Proyecto</a>
+      					</li>
+      					<li class="nav-item">
+        					<a class="nav-link" href="#ExperienciaLaboral">Experiencia laboral</a>
+      					</li>
+      					<li class="nav-item">
+        					<a class="nav-link" href="#referencias">Referencias</a>
+      					</li>
+      					<li class="nav-item">
+        					<a class="nav-link" href="#contacto">Contacto</a>
+      					</li>
+    				</ul>
+  				</div>
+			</nav>
+		</header>
+		<div class="container">
+			<section  id="sobreMi" style="margin-top: 50px;">
+				<div data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1500">
+				<div class="card mb" style="max-width: 100%;">
+	  				<div class="row no-gutters">
+	    				<div class="col-md-3">
+	      					<img style="border: 3px solid #ffa500" src="imagenes/foto.jpg" class="card-img" class="img-fluid"  alt="fotoPerfil">
+	    				</div>
+	    				<div class="col-md-9">
+		      				<div class="card-body">
+		        				<h2 class="card-title">Sobre mí</h2>
+		        				<p class="card-text" style="padding-top: 15px;">Vivo en la ciudad de Rosario, Santa Fé. Actualmente estoy cursando la carrera de analista en sistemas y como complemento también realizo un curso de .NET.
+		        				</p>
+		        				<p>En cuanto a lo laboral, me desempeño en la actividad hotelera hace mas de 6 años, por lo que he adquirido basta experiencia en el trato con el cliente.
+		        				</p> 
+		        				<p>Siempre senti curiosidad por todo lo relacionado con la programación, por lo que decidí dar el paso e introducirme a este amplio e interesante mundo, dicho esto, mi objetivo es dedicarme de lleno a esta profesión que tanto me apasiona y gratifica a medida que voy viendo los resultados del aprendizaje.
+		        				</p>
+		        				<p><b>Nombre: </b> Lopez Ruben Hernán.</p>
+		        				<p><b>Edad: </b> 31 años.</p>
+		        				<p><b>Domicilio: </b>Ituzaingó 1299, 5TO A. Rosario, Santa Fé.</p>
+		        				<button style="float: right;" type="button" class="btn btn-outline-warning"><a href="cv/CurriculumVitaeLopezRubenDeveloper.pdf" download="CurriculumVitaeLopezRubenDeveloper" target="_blank">Descargar curriculum vitae</a></button>	
+		      				</div>
+	    				</div>
+	  				</div>
+				</div>
+				</div>
+			</section>
+			<section class="intro" id="formacion">
+				<div data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine">
+				<h2>Formación</h2>
+				</div>
+				<div class="espacio" style="border-left: 3px solid #ffa500;" data-aos="fade-up" data-aos-duration="3000">
+				<div data-aos="fade-right" data-aos-offset="250" data-aos-easing="ease-in-sine">
+				<h5><i style="color: #ffa500" class="fas fa-arrow-right"></i>Instituto Politécnico Superior Gral. San Martin. Rosario, Santa Fé.</h5>
+				<p class="pad">2019 / Actualidad: Analista Universitario en Sistemas.</p>
+				</div>
+				<div data-aos="fade-right" data-aos-offset="270" data-aos-easing="ease-in-sine">
+				<h5><i style="color: #ffa500" class="fas fa-arrow-right"></i>Educación it. Rosario. Santa Fé.</h5>
+				<p class="pad">Actualidad: Microsoft Developer Engineer.</p>
+				</div>
+				<div data-aos="fade-right" data-aos-offset="290" data-aos-easing="ease-in-sine">
+				<h5><i style="color: #ffa500" class="fas fa-arrow-right"></i>Instituto Superior de Formación Técnica N°118. San Pedro. Buenos Aires.</h5>
+				<p class="pad">2007/2010: Técnico Superior en Hoteleria.</p>
+				</div>
+				</div>
+			</section>
+			<section class="intro" id="certificados">
+				<h2>Certificaciones</h2>
+				<div class="row espacio">
+					<div class="col-md-2 padCel">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#poo">
+						  POO
+						</button>
+						<!-- Modal -->
+						<div class="modal fade" id="poo" tabindex="-1" role="dialog" aria-labelledby="poo" aria-hidden="true">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="poo">Certificado</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        <img src="imagenes/certificadoPOO.jpg" class="img-fluid" alt="poo">
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-2 padCel">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#html5Css3">
+						  html5
+						</button>
+						<!-- Modal -->
+						<div class="modal fade" id="html5Css3" tabindex="-1" role="dialog" aria-labelledby="html5Css3" aria-hidden="true">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="html5Css3">Certificado</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        <img src="imagenes/CertificadoHtmlyCSS.jpg" class="img-fluid" alt="html5">
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-2 padCel">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bd">
+						  BD Y SQL
+						</button>
+						<!-- Modal -->
+						<div class="modal fade" id="bd" tabindex="-1" role="dialog" aria-labelledby="bd" aria-hidden="true">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="bd">Certificado</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        <img src="imagenes/Base de datosySQL.jpg" class="img-fluid" alt="base de datosySQL">
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>			
+					</div>
+					<div class="col-md-2 padCel">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#javaScript">
+						  JavaScript
+						</button>
+						<!-- Modal -->
+						<div class="modal fade" id="javaScript" tabindex="-1" role="dialog" aria-labelledby="javaScript" aria-hidden="true">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="javaScript">Certificado</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        <img src="imagenes/javaScript.jpg" class="img-fluid" alt="JavaScript">
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-2 padCel">
+							<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cSharp">
+						  Introducción a C#
+						</button>
+						<!-- Modal -->
+						<div class="modal fade" id="cSharp" tabindex="-1" role="dialog" aria-labelledby="cSharp" aria-hidden="true">
+						  <div class="modal-dialog">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="cSharp">Certificado</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        <img src="imagenes/cSharp.jpg" class="img-fluid" alt="cSharp">
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					<div class="col-md-2 padCel">
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#titulo">
+						  Téc. Sup. Hotelero
+						</button>
+						<!-- Modal -->
+						<div class="modal fade" id="titulo" tabindex="-1" role="dialog" aria-labelledby="titulo" aria-hidden="true">
+						  <div class="modal-dialog modal-dialog-scrollable">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="titulo">Título</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        <img src="imagenes/titulo.jpg" class="img-fluid" alt="tituloHoteleria">
+						        <img src="imagenes/tituloC.jpg" class="img-fluid" alt="tituloHoteleria">
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>		
+					</div>
+				</div>
+			</section>
+			<section class="intro barras">
+				<h2>Tecnologías</h2>
+				<div class="container espacio">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="round" data-value="0.55" data-size="200" data-thickness="12">
+								<strong></strong>
+								<span><i class="fab fa-html5"></i>HTML</span>
+							</div>
+						</div>
+						<div class="col-md-3" >
+							<div class="round" data-value="0.40" data-size="200" data-thickness="12">
+								<strong></strong>
+								<span><i class="fab fa-css3-alt"></i>CSS</span>
+							</div>
+						</div>
+						<div class="col-md-3" >
+							<div class="round" data-value="0.30" data-size="200" data-thickness="12">
+								<strong></strong>
+								<span><i class="fab fa-js"></i>JAVASCRIPT </span>
+							</div>
+						</div>
+						<div class="col-md-3" >
+							<div class="round" data-value="0.40" data-size="200" data-thickness="12">
+								<strong></strong>
+								<span><i class="fab fa-bootstrap"></i>BOOTSTRAP</span>
+							</div>
+						</div>
+					</div>
+					<div class="row espacio" >
+						<div class="col-md-3" >
+							<div class="round" data-value="0.60" data-size="200" data-thickness="12">
+								<strong></strong>
+								<span><i class="fas fa-laptop-code"></i></span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="round" data-value="0.30" data-size="200" data-thickness="12">
+								<strong></strong>
+								<span><i class="fas fa-laptop-code"></i>C#</span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="round" data-value="0.30" data-size="200" data-thickness="12">
+								<strong></strong>
+								<span><i class="fas fa-laptop-code"></i>MySQL</span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="round" data-value="0.30" data-size="200" data-thickness="12">
+								<strong></strong>
+								<span><i class="fab fa-php"></i></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="intro" id="proyecto">
+				<h2>Proyecto</h2>		
+				<div class="card mb espacio" style="max-width: 100%;">
+	  				<div class="row no-gutters">
+	    				<div class="col-md-7"data-aos="zoom-in" data-aos-duration="3000" >
+	    					<div class="containerImg">
+                 				<img src="imagenes/proyecto.jpg" class="card-img" class="image"  alt="fotoPerfil">
+                  				<div class="middle">
+                    				<div class="text"><a href="https://www.impecar.com.ar/" target="_blank">Ver sitio</a></div>
+                  				</div>
+                			</div>
+	    				</div>		
+	    				<div class="col-md-5">
+		      				<div class="card-body">
+		        				<p class="card-text" style="padding-top: 40px;"><b style="color:#ffffff;">Proyecto: </b>Impecar.com.ar-Programación.</p>
+		        				<p><b>Cliente: </b>Impecar.</p>
+		        				<p><b>Trabajo realizado: </b> Diseño y programacion de landing page.</p>
+		        				<p><b>Tecnologías utilizadas: </b>HTML5-CSS3-JAVASCRIPT-PHP-BOOTSTRAP.</p>
+		        				<p><b>Descripción: </b>Primer proyecto realizado para el negocio de mi hermano, la idea es dar a conocer a mas personas los servicios y productos que comercializa. La pagina es responsive por lo que se  puede acceder y navegar desde cualquier dispositivo.</p>
+		      				</div>
+	    				</div>
+	  				</div>
+			</section>
+			<section class="intro" id="ExperienciaLaboral">
+				<div data-aos="fade-right" data-aos-offset="160" data-aos-easing="ease-in-sine">
+				<h2>Experiencia laboral</h2>
+				</div>
+				<div class="espacio" style="border-left: 3px solid #ffa500;" data-aos="fade-up" data-aos-duration="3000">
+				<div data-aos="zoom-in-right" data-aos-offset="180" >
+				<h5><i style="color: #ffa500" class="fas fa-arrow-right"></i>2017/Actualidad: Recepcionista.</h5>
+				<p class="pad">Hotel de la Cite. Rosario. Sta. Fe.</p>
+				</div>
+				<div data-aos="zoom-in-right" data-aos-offset="200" >
+				<h5><i style="color: #ffa500" class="fas fa-arrow-right"></i>2016/2017: Agente de ventas.</h5>
+				<p class="pad">Dynatac Phone S.R.L. Rosario, Sta. Fe.</p>
+				</div>
+				<div data-aos="zoom-in-right" data-aos-offset="200" >
+				<h5><i style="color: #ffa500" class="fas fa-arrow-right"></i>2014/2016: Asistente de gerencia.</h5>
+				<p class="pad">Howard Johnson Marinas,San Pedro,Bs As.</p>
+				</div>
+				<div data-aos="zoom-in-right" data-aos-offset="220" >
+				<h5><i style="color: #ffa500" class="fas fa-arrow-right"></i>2012/2014: Recepcionista.</h5>
+				<p class="pad">Howard Johnson Hotel&Spa, San Pedro, Bs As.</p>
+				</div>
+				<div data-aos="zoom-in-right" data-aos-offset="225" >
+				<h5><i style="color: #ffa500" class="fas fa-arrow-right"></i>2010/2012: Instructor de manejo. </h5>
+				<p class="pad">Luz Verde Escuela de conductores. San Nicolas. Bs.as</p>
+				</div>
+				</div>
+			</section>
+			<section class="intro" id="referencias">
+				<div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
+				<h2>Referencias</h2>
+				</div>
+				<div class="espacio" style="border-left: 3px solid #ffa500;" data-aos="fade-up" data-aos-duration="3000">
+				<div data-aos="zoom-in-right" data-aos-offset="220">
+				<h5><i style="color: #ffa500" class="fas fa-arrow-right"></i>Perez Facundo, Supervisor en Dynatac Phone.</h5>
+				<p class="pad">Contacto:  (0341) - 4113827.</p>
+				</div>
+				<div data-aos="zoom-in-right" data-aos-offset="230" >
+				<h5><i style="color: #ffa500" class="fas fa-arrow-right"></i>Novak Guido, Gerente General Howard Johnson San Pedro.</h5>
+				<p class="pad">Contacto:  (03329) - 15662162 / (03329) - 431200.</p>
+				</div>
+				<div data-aos="zoom-in-right" data-aos-offset="240">
+				<h5><i style="color: #ffa500" class="fas fa-arrow-right"></i>Evdemon Alexis, Propietario y director de Luz Verde Esc. de conductores.</h5>
+				<p class="pad">Contacto:   (03461) - 15629896.</p>
+				</div>
+				</div>
+			</section>
+			<section class="intro barras" id="contacto">
+				<h2>Contacto</h2>
+				<div class="container espacio">
+					<div class="row">
+						<div class="col-sm-3">
+							<strong></strong>
+							<span><i class="fab fa-whatsapp" style="color: #ffa500;font-size: 2rem;"></i>
+							</span><p>3329645713</p>
+						</div>
+						<div class="col-sm-3" >	
+							<strong></strong>
+								<span><i style="color: #ffa500;font-size: 2rem;" class="far fa-envelope"></i>
+								</span><p>rlopez4489@gmail.com</p>
+						</div>
+						<div class="col-sm-3" >
+							<strong></strong>
+							<span><i style="color: #ffa500;font-size: 2rem;" class="fab fa-linkedin"></i> </span><p><a href="https://www.linkedin.com/in/ruben-lopez-49bb94159/" target="_blank">/in/ruben-lopez-49bb94159</a></p>
+						</div>
+						<div class="col-sm-3" >
+							<strong></strong>
+							<span><i  style="color: #ffa500;font-size: 2rem;" class="fab fa-github-square"></i></span><p><a href="https://github.com/rlopez4489" target="_blank">github.com/rlopez4489</a></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="intro">
+				<footer>
+					<h6 style="text-align: center;"><i class="fas fa-copyright"></i> 2020 Designed by Lopez Ruben Design</h6>
+				</footer>
+			</section>
+			<a href="#menu"><i id="botonArriba" class="fas fa-chevron-circle-up"></i></a>
+		</div>
+			<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js"></script>
+			<script>
+				function irArriba(){
+					window.addEventListener('scroll', () => {
+						var scroll = document.documentElement.scrollTop;
+						var botonArriba = document.getElementById('botonArriba');
+						if(scroll > 300){
+							botonArriba.style.right = 20 + "px";
+						} else {
+							botonArriba.style.right = -100 + "px";
+						}
+					})
+				}
+				irArriba();
+			</script>
+			<script>
+			function Circulo(el){
+				$(el).circleProgress({fill: {color: '#ffe518'}})
+				.on('circle-animation-progress', function(event, progress, stepValue){
+					$(this).find('strong').text(String(stepValue.toFixed(2)).substr(2)+'%');
+				});
+				};
+					Circulo('.round');
+			</script>
+			<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>	
+			<script>
+		  		AOS.init();
+			</script>
+	</body>
+</html>
