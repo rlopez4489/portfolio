@@ -10,139 +10,11 @@
 		<link href="https://fonts.googleapis.com/css2?family=Enriqueta&display=swap" rel="stylesheet">
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/93b9f45dc1.js" crossorigin="anonymous"></script>
-		<style>
-			body{
-				background-color: #000000;color: #ffffff;
-			}
-			.card{background-color: #000000;border-style: none;}
-			.bg-light{background-color: #000000 !important;}
-		
-			.navbar-light .navbar-nav .nav-link{
-				color: #c7cbd1;
-			}
-			.navbar-light .navbar-nav .nav-link:hover {color: #ffffff;border-bottom: 1px solid #ffa500;}
-			.intro {
-				margin-top: 150px;
-			}
-			p{
-				color: #c7cbd1;
-			}
-			b{
-				style="color:#ffffff;"
-			}
-			
-			.btn-outline-warning:hover{
-				background-color: #ffa500;
-    			border-color: #ffa500;
-			}
-			.card-body {padding-top: 0; padding-bottom: 0;}
-			h2{text-align: center;}
-			.pad{padding-left: 20px;}
-			.espacio {
-				margin-top: 40px;
-			}
-			.navbar-light .navbar-toggler{
-				color: #ffffff; border-color: #ffffff;
-			}
-			.iconAlineacion {
-				
-				text-align: center;
-			}
-			
-		
-		
-			.iconAlineacion  span i{
-				color: #ffe518;
-				font-size: 2rem;
-				margin-right: 7px;
-			}
-			
-			a:link {color:#ffffff;}
-			a:visited {color:#ffffff;}
-			a:active {color:#ffffff;}
-			a:hover {color:#ffffff;text-decoration: none;}
-			.containerImg {
-			  position: relative;
-			  width: 100%;
-			}
-			.image {
-			  opacity: 1;
-			  display: block;
-			  width: 100%;
-			  height: auto;
-			  transition: .5s ease;
-			  backface-visibility: hidden;
-			}
-			.middle {
-			  transition: .5s ease;
-			  opacity: 0;
-			  position: absolute;
-			  top: 50%;
-			  left: 50%;
-			  transform: translate(-50%, -50%);
-			  -ms-transform: translate(-50%, -50%);
-			  text-align: center;
-			}
-			.containerImg:hover .image {
-			  opacity: 0.1;
-			}
-			.containerImg:hover .middle {
-			  opacity: 1;
-			}
-
-			.text {
-			  background-color: #ffa500;
-			  color: white;
-			  font-size: 16px;
-			  padding: 8px 16px;
-			  border: 3px solid #ffa500;
-			  margin-bottom: 15px;
-			}
-			#botonArriba {
-				position: fixed;
-				bottom: 20px;
-				right: -100px;
-				width: 40px;
-				font-size: 40px;
-			}
-			.modal-content {
-				background-color: #000000;
-			}
-			.close {
-				color: #ffffff;
-			}
-			.close:hover{
-				color: #ffffff;
-			}
-			.modal-footer .btn-secondary {
-				background-color: transparent;
-			}
-			.btn-primary{
-				background-color: transparent;
-				border-color: #ffa500;
-			}
-			.btn-primary:hover{
-				background-color: #ffa500;
-				border-color: #ffa500;
-			}			
-			.btn-primary:focus{
-				background-color: #ffa500;
-				border-color: #ffa500;	
-				box-shadow: none;
-			}
-			.btn-primary:not(:disabled):not(.disabled):active{
-				background-color: #ffa500;
-				border-color: #ffa500;
-			}
-			.padCel{
-				padding-bottom: 20px;
-				text-align: center;
-			}
-		</style>
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu" >
+			<nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu">
   				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     				<span><i class="fas fa-bars"></i></span>
   				</button>
@@ -158,10 +30,10 @@
         					<a class="nav-link" href="#certificados">Certificaciones</a>
       					</li>
        					<li class="nav-item">
-        					<a class="nav-link" href="#barras">Tecnologias</a>
+        					<a class="nav-link" href="#tecnologias">Tecnologías</a>
       					</li>
      	 				<li class="nav-item">
-        					<a class="nav-link" href="#proyecto">Proyecto</a>
+        					<a class="nav-link" href="#proyecto">Proyectos</a>
       					</li>
       					<li class="nav-item">
         					<a class="nav-link" href="#ExperienciaLaboral">Experiencia laboral</a>
@@ -294,7 +166,7 @@
 						        <img src="imagenes/Base de datosySQL.jpg" class="img-fluid" alt="base de datosySQL">
 						      </div>
 						      <div class="modal-footer">
-						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 						      </div>
 						    </div>
 						  </div>
@@ -316,10 +188,10 @@
 						        </button>
 						      </div>
 						      <div class="modal-body">
-						        <img src="imagenes/JavaScript.jpg" class="img-fluid" alt="JavaScript">
+						        <img src="imagenes/javaScript.jpg" class="img-fluid" alt="JavaScript">
 						      </div>
 						      <div class="modal-footer">
-						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 						      </div>
 						    </div>
 						  </div>
@@ -344,7 +216,7 @@
 						        <img src="imagenes/cSharp.jpg" class="img-fluid" alt="cSharp">
 						      </div>
 						      <div class="modal-footer">
-						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 						      </div>
 						    </div>
 						  </div>
@@ -366,11 +238,11 @@
 						        </button>
 						      </div>
 						      <div class="modal-body">
-						        <img src="imagenes/Titulo.jpg" class="img-fluid" alt="tituloHoteleria">
-						        <img src="imagenes/TituloC.jpg" class="img-fluid" alt="tituloHoteleria">
+						        <img src="imagenes/titulo.jpg" class="img-fluid" alt="tituloHoteleria">
+						        <img src="imagenes/tituloC.jpg" class="img-fluid" alt="tituloHoteleria">
 						      </div>
 						      <div class="modal-footer">
-						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 						      </div>
 						    </div>
 						  </div>
@@ -382,39 +254,39 @@
 				<h2>Tecnologías</h2>
 				<div class="container espacio iconAlineacion">
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-md-3 espTec">
 							<span><i class="fab fa-html5"></i>HTML</span>	
 						</div>
-						<div class="col-md-3" >		
+						<div class="col-md-3 espTec" >		
 							<span><i class="fab fa-css3-alt"></i>CSS</span>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 espTec">
 							<span><i class="fab fa-js"></i>JAVASCRIPT </span>
 						</div>
-						<div class="col-md-3" >
+						<div class="col-md-3 espTec" >
 							<span><i class="fab fa-bootstrap"></i>BOOTSTRAP</span>
 						</div>
 					</div>
-					<div class="row espacio" >
-						<div class="col-md-3" >
+					<div class="row" >
+						<div class="col-md-3 espTec" >
 							<span><i class="fas fa-laptop-code"></i>C</span>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 espTec">
 								<span><i class="fas fa-laptop-code"></i>C#</span>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 espTec">
 							<span><i class="fas fa-laptop-code"></i>MySQL</span>
 						</div>
 						<div class="col-md-3">
-							<span><i class="fab fa-php"></i></span>
+							<span><i class="fab fa-php"></i>PHP</span>
 						</div>
 					</div>
 				</div>
 			</section>
 			<section class="intro" id="proyecto">
-				<h2>Proyecto</h2>		
+				<h2>Proyectos</h2>		
 				<div class="card mb espacio" style="max-width: 100%;">
-	  				<div class="row no-gutters">
+	  				<div class="row">
 	    				<div class="col-md-7"data-aos="zoom-in" data-aos-duration="3000" >
 	    					<div class="containerImg">
                  				<img src="imagenes/proyecto.jpg" class="card-img" class="image"  alt="fotoPerfil">
@@ -425,7 +297,7 @@
 	    				</div>		
 	    				<div class="col-md-5">
 		      				<div class="card-body">
-		        				<p class="card-text" style="padding-top: 40px;"><b style="color:#ffffff;">Proyecto: </b>Impecar.com.ar-Programación.</p>
+		        				<p class="card-text" style="padding-top: 40px;"><b style="color:#ffffff;">Proyecto: </b>impecar.com.ar-Programación.</p>
 		        				<p><b>Cliente: </b>Impecar.</p>
 		        				<p><b>Trabajo realizado: </b> Diseño y programacion de landing page.</p>
 		        				<p><b>Tecnologías utilizadas: </b>HTML5-CSS3-JAVASCRIPT-PHP-BOOTSTRAP.</p>
@@ -433,6 +305,26 @@
 		      				</div>
 	    				</div>
 	  				</div>
+	  				<div class="row espacio">
+	    				<div class="col-md-7"data-aos="zoom-in" data-aos-duration="3000" >
+	    					<div class="containerImg">
+                 				<img src="imagenes/ganvaru.jpg" class="card-img" class="image"  alt="fotoPerfil">
+                  				<div class="middle">
+                    				<div class="text"><a href="https://ganvaru.com.ar/" target="_blank">Ver sitio</a></div>
+                  				</div>
+                			</div>
+	    				</div>		
+	    				<div class="col-md-5">
+		      				<div class="card-body">
+		        				<p class="card-text" style="padding-top: 20px;"><b style="color:#ffffff;">Proyecto: </b>ganvaru.com.ar-Programación.</p>
+		        				<p><b>Cliente: </b>Proyecto personal.</p>
+		        				<p><b>Trabajo realizado: </b> Diseño y programacion de landing page.</p>
+		        				<p><b>Tecnologías utilizadas: </b>HTML5-CSS3-JAVASCRIPT-PHP-BOOTSTRAP.</p>
+		        				<p><b>Descripción: </b>Segundo proyecto realizado para un emprendimiento personal, la idea es comenzar con pequeños proyectos para ir afianzando los conocimientos y también ir conociendo el trato con el cliente y como resolver sus necesidades. El proyecto es totalmente responsive.</p>
+		      				</div>
+	    				</div>
+	  				</div>
+	  			</div>
 			</section>
 			<section class="intro" id="ExperienciaLaboral">
 				<div data-aos="fade-right" data-aos-offset="160" data-aos-easing="ease-in-sine">
@@ -512,6 +404,8 @@
 			</section>
 			<a href="#menu"><i id="botonArriba" class="fas fa-chevron-circle-up"></i></a>
 		</div>
+			<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.0/circle-progress.min.js"></script>
 			<script>
 				function irArriba(){
 					window.addEventListener('scroll', () => {
@@ -525,6 +419,15 @@
 					})
 				}
 				irArriba();
+			</script>
+			<script>
+			function Circulo(el){
+				$(el).circleProgress({fill: {color: '#ffe518'}})
+				.on('circle-animation-progress', function(event, progress, stepValue){
+					$(this).find('strong').text(String(stepValue.toFixed(2)).substr(2)+'%');
+				});
+				};
+					Circulo('.round');
 			</script>
 			<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

@@ -1,0 +1,133 @@
+html {
+	scroll-behavior: smooth;
+	}
+body{
+background-color: #000000;color: #ffffff;
+}
+.card{background-color: #000000;border-style: none;}
+.bg-light{background-color: #000000 !important;}
+
+.navbar-light .navbar-nav .nav-link{
+color: #c7cbd1;
+}
+.navbar-light .navbar-nav .nav-link:hover {color: #ffffff;border-bottom: 1px solid #ffa500;}
+.intro {
+margin-top: 150px;
+}
+p{
+color: #c7cbd1;
+}
+b{
+style="color:#ffffff;"
+}
+
+.btn-outline-warning:hover{
+background-color: #ffa500;
+border-color: #ffa500;
+}
+.card-body {padding-top: 0; padding-bottom: 0;}
+h2{text-align: center;}
+.pad{padding-left: 20px;}
+.espacio {
+margin-top: 40px;
+}
+.navbar-light .navbar-toggler{
+color: #ffffff; border-color: #ffffff;
+}
+.iconAlineacion {
+
+text-align: center;
+}
+.iconAlineacion  span i{
+color: #ffe518;
+font-size: 2rem;
+margin-right: 7px;
+}
+.espTec{
+margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 990px){
+.iconAlineacion{
+text-align: left;
+}
+} 
+
+a:link {color:#ffffff;}
+a:visited {color:#ffffff;}
+a:active {color:#ffffff;}
+a:hover {color:#ffffff;text-decoration: none;}
+
+.image {
+opacity: 1;
+display: block;
+width: 100%;
+height: auto;
+transition: .5s ease;
+backface-visibility: hidden;
+}
+.middle {
+transition: .5s ease;
+opacity: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+text-align: center;
+}
+.containerImg:hover .image {
+opacity: 0.1;
+}
+.containerImg:hover .middle {
+opacity: 1;
+}
+
+.text {
+background-color: #ffa500;
+color: white;
+font-size: 16px;
+padding: 8px 16px;
+border: 3px solid #ffa500;
+margin-bottom: 15px;
+}
+#botonArriba {
+position: fixed;
+bottom: 20px;
+right: -100px;
+width: 40px;
+font-size: 40px;
+}
+.modal-content {
+background-color: #000000;
+}
+.close {
+color: #ffffff;
+}
+.close:hover{
+color: #ffffff;
+}
+.modal-footer .btn-secondary {
+background-color: transparent;
+}
+.btn-primary{
+background-color: transparent;
+border-color: #ffa500;
+}
+.btn-primary:hover{
+background-color: #ffa500;
+border-color: #ffa500;
+}			
+.btn-primary:focus{
+background-color: #ffa500;
+border-color: #ffa500;	
+box-shadow: none;
+}
+.btn-primary:not(:disabled):not(.disabled):active{
+background-color: #ffa500;
+border-color: #ffa500;
+}
+.padCel{
+padding-bottom: 20px;
+text-align: center;
+}
